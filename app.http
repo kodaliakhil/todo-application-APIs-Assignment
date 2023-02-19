@@ -1,0 +1,34 @@
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+GET http://localhost:3000/todos/?priority=HIGH
+###
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+###
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+###
+GET http://localhost:3000/todos/?category=HOME
+###
+GET http://localhost:3000/todos/2/
+###
+
+GET http://localhost:3000/agenda/?date=2022-03-22
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+ "id": 9,
+ "todo": "resign to the job",
+ "priority": "HIGH",
+ "status": "ONE",
+ "category": "WORK",
+ "dueDate": "2022-15-22"
+}
+###
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{ "dueDate": "2022-15-22" }
+###
+DELETE http://localhost:3000/todos/7/
